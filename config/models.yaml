@@ -1,0 +1,252 @@
+# LLM model catalog: API model IDs and estimated USD pricing per 1M tokens.
+# Sources: OpenAI / Anthropic / Google pricing pages (verified 2026-07).
+# Batch rates are typically 50% of standard API rates where supported.
+#
+# Fields per model:
+#   input_usd_per_1m          – standard API input
+#   output_usd_per_1m         – standard API output
+#   batch_input_usd_per_1m    – optional batch API input (50% off when omitted)
+#   batch_output_usd_per_1m   – optional batch API output (50% off when omitted)
+#   cache_hit_input_usd_per_1m – optional cache-hit input rate (DeepSeek)
+
+providers:
+  openai:
+    default_model: gpt-4.1-nano
+    models:
+      gpt-4.1-nano:
+        input_usd_per_1m: 0.10
+        output_usd_per_1m: 0.40
+      gpt-4.1-mini:
+        input_usd_per_1m: 0.40
+        output_usd_per_1m: 1.60
+      gpt-4.1:
+        input_usd_per_1m: 2.00
+        output_usd_per_1m: 8.00
+      gpt-4o-mini:
+        input_usd_per_1m: 0.15
+        output_usd_per_1m: 0.60
+      gpt-4o:
+        input_usd_per_1m: 2.50
+        output_usd_per_1m: 10.00
+      gpt-5-nano:
+        input_usd_per_1m: 0.05
+        output_usd_per_1m: 0.40
+      gpt-5-mini:
+        input_usd_per_1m: 0.25
+        output_usd_per_1m: 2.00
+      gpt-5:
+        input_usd_per_1m: 1.25
+        output_usd_per_1m: 10.00
+      gpt-5.1:
+        input_usd_per_1m: 1.25
+        output_usd_per_1m: 10.00
+      gpt-5.2:
+        input_usd_per_1m: 1.75
+        output_usd_per_1m: 14.00
+      gpt-5.3-codex:
+        input_usd_per_1m: 1.75
+        output_usd_per_1m: 14.00
+      gpt-5.4-nano:
+        input_usd_per_1m: 0.20
+        output_usd_per_1m: 1.25
+      gpt-5.4-mini:
+        input_usd_per_1m: 0.75
+        output_usd_per_1m: 4.50
+      gpt-5.4:
+        input_usd_per_1m: 2.50
+        output_usd_per_1m: 15.00
+      gpt-5.4-pro:
+        input_usd_per_1m: 30.00
+        output_usd_per_1m: 180.00
+      gpt-5.5:
+        input_usd_per_1m: 5.00
+        output_usd_per_1m: 30.00
+      gpt-5.5-pro:
+        input_usd_per_1m: 30.00
+        output_usd_per_1m: 180.00
+      gpt-5.6-luna:
+        input_usd_per_1m: 1.00
+        output_usd_per_1m: 6.00
+      gpt-5.6-terra:
+        input_usd_per_1m: 2.50
+        output_usd_per_1m: 15.00
+      gpt-5.6-sol:
+        input_usd_per_1m: 5.00
+        output_usd_per_1m: 30.00
+      gpt-5-pro:
+        input_usd_per_1m: 15.00
+        output_usd_per_1m: 120.00
+      o4-mini:
+        input_usd_per_1m: 1.10
+        output_usd_per_1m: 4.40
+      o3-mini:
+        input_usd_per_1m: 1.10
+        output_usd_per_1m: 4.40
+      o3:
+        input_usd_per_1m: 2.00
+        output_usd_per_1m: 8.00
+      o3-pro:
+        input_usd_per_1m: 20.00
+        output_usd_per_1m: 80.00
+      o1-mini:
+        input_usd_per_1m: 1.10
+        output_usd_per_1m: 4.40
+      o1:
+        input_usd_per_1m: 15.00
+        output_usd_per_1m: 60.00
+      o1-pro:
+        input_usd_per_1m: 150.00
+        output_usd_per_1m: 600.00
+
+  claude:
+    default_model: claude-sonnet-4-6
+    models:
+      claude-haiku-4-5:
+        input_usd_per_1m: 1.00
+        output_usd_per_1m: 5.00
+        batch_input_usd_per_1m: 0.50
+        batch_output_usd_per_1m: 2.50
+      claude-3-5-haiku-20241022:
+        input_usd_per_1m: 0.80
+        output_usd_per_1m: 4.00
+        batch_input_usd_per_1m: 0.40
+        batch_output_usd_per_1m: 2.00
+      claude-sonnet-4-6:
+        input_usd_per_1m: 3.00
+        output_usd_per_1m: 15.00
+        batch_input_usd_per_1m: 1.50
+        batch_output_usd_per_1m: 7.50
+      claude-sonnet-4-5:
+        input_usd_per_1m: 3.00
+        output_usd_per_1m: 15.00
+        batch_input_usd_per_1m: 1.50
+        batch_output_usd_per_1m: 7.50
+      claude-sonnet-4-20250514:
+        input_usd_per_1m: 3.00
+        output_usd_per_1m: 15.00
+        batch_input_usd_per_1m: 1.50
+        batch_output_usd_per_1m: 7.50
+      claude-3-5-sonnet-20241022:
+        input_usd_per_1m: 3.00
+        output_usd_per_1m: 15.00
+        batch_input_usd_per_1m: 1.50
+        batch_output_usd_per_1m: 7.50
+      claude-3-5-sonnet-20240620:
+        input_usd_per_1m: 3.00
+        output_usd_per_1m: 15.00
+        batch_input_usd_per_1m: 1.50
+        batch_output_usd_per_1m: 7.50
+      claude-opus-4-6:
+        input_usd_per_1m: 5.00
+        output_usd_per_1m: 25.00
+        batch_input_usd_per_1m: 2.50
+        batch_output_usd_per_1m: 12.50
+      claude-opus-4-5:
+        input_usd_per_1m: 5.00
+        output_usd_per_1m: 25.00
+        batch_input_usd_per_1m: 2.50
+        batch_output_usd_per_1m: 12.50
+      claude-opus-4-7:
+        input_usd_per_1m: 5.00
+        output_usd_per_1m: 25.00
+        batch_input_usd_per_1m: 2.50
+        batch_output_usd_per_1m: 12.50
+      claude-opus-4-8:
+        input_usd_per_1m: 5.00
+        output_usd_per_1m: 25.00
+        batch_input_usd_per_1m: 2.50
+        batch_output_usd_per_1m: 12.50
+      claude-opus-4-20250514:
+        input_usd_per_1m: 15.00
+        output_usd_per_1m: 75.00
+        batch_input_usd_per_1m: 7.50
+        batch_output_usd_per_1m: 37.50
+      claude-3-opus-20240229:
+        input_usd_per_1m: 15.00
+        output_usd_per_1m: 75.00
+        batch_input_usd_per_1m: 7.50
+        batch_output_usd_per_1m: 37.50
+      claude-sonnet-5:
+        input_usd_per_1m: 2.00
+        output_usd_per_1m: 10.00
+        batch_input_usd_per_1m: 1.00
+        batch_output_usd_per_1m: 5.00
+      claude-opus-5:
+        input_usd_per_1m: 5.00
+        output_usd_per_1m: 25.00
+        batch_input_usd_per_1m: 2.50
+        batch_output_usd_per_1m: 12.50
+      claude-fable-5:
+        input_usd_per_1m: 10.00
+        output_usd_per_1m: 50.00
+        batch_input_usd_per_1m: 5.00
+        batch_output_usd_per_1m: 25.00
+
+  gemini:
+    default_model: gemini-2.5-flash
+    models:
+      gemini-2.0-flash-lite:
+        input_usd_per_1m: 0.075
+        output_usd_per_1m: 0.30
+      gemini-2.0-flash:
+        input_usd_per_1m: 0.10
+        output_usd_per_1m: 0.40
+      gemini-2.5-flash-lite:
+        input_usd_per_1m: 0.10
+        output_usd_per_1m: 0.40
+      gemini-2.5-flash:
+        input_usd_per_1m: 0.30
+        output_usd_per_1m: 2.50
+      gemini-2.5-pro:
+        input_usd_per_1m: 1.25
+        output_usd_per_1m: 10.00
+      gemini-3-flash-preview:
+        input_usd_per_1m: 0.50
+        output_usd_per_1m: 3.00
+      gemini-3-pro-preview:
+        input_usd_per_1m: 2.00
+        output_usd_per_1m: 12.00
+      gemini-3.1-pro-preview:
+        input_usd_per_1m: 2.00
+        output_usd_per_1m: 12.00
+      gemini-3.1-flash-lite-preview:
+        input_usd_per_1m: 0.25
+        output_usd_per_1m: 1.50
+
+  deepseek:
+    default_model: deepseek-v4-flash
+    models:
+      deepseek-v4-flash:
+        input_usd_per_1m: 0.14
+        output_usd_per_1m: 0.28
+        cache_hit_input_usd_per_1m: 0.0028
+      deepseek-v4-pro:
+        input_usd_per_1m: 0.435
+        output_usd_per_1m: 0.87
+        cache_hit_input_usd_per_1m: 0.003625
+      deepseek-chat:
+        input_usd_per_1m: 0.14
+        output_usd_per_1m: 0.28
+        cache_hit_input_usd_per_1m: 0.0028
+      deepseek-reasoner:
+        input_usd_per_1m: 0.14
+        output_usd_per_1m: 0.28
+        cache_hit_input_usd_per_1m: 0.0028
+
+  ollama:
+    default_model: llama3.2
+    models:
+      llama3.2: {}
+      llama3.1: {}
+      "llama3.1:8b": {}
+      "llama3.1:70b": {}
+      llama3.3: {}
+      mistral: {}
+      mixtral: {}
+      qwen2.5: {}
+      "qwen2.5:7b": {}
+      "qwen2.5:14b": {}
+      "qwen2.5:32b": {}
+      deepseek-r1: {}
+      gemma2: {}
+      phi3: {}
